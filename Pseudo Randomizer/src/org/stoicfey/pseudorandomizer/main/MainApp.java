@@ -20,7 +20,7 @@ public class MainApp {
 	private static Scanner scanner;
 	private static PseudoRandomizer pseudoRandomizer;
 	private static Divisioner divisioner;
-	private static ValueComparator valueFinder;
+	private static ValueComparator valueComparator;
 	private static StringNumericValueProductCounter stringNumericValueProductCounter;
 	private static MillisecondsGetter millisecondsGetter;
 	private static RangeAsker rangeAsker;
@@ -28,9 +28,9 @@ public class MainApp {
 	public static void main(String[] args) {
 			setMillisecondsGetter(new MillisecondsGetter());
 			setStringNumericValueProductCounter(new StringNumericValueProductCounter());
-			setValueFinder(new ValueComparator());
+			setValueComparator(new ValueComparator());
 			setDivisioner(new Divisioner());
-			setPseudoRandomizer(new PseudoRandomizer(getMillisecondsGetter(), getStringNumericValueProductCounter(), getDivisioner(), getValueFinder()));
+			setPseudoRandomizer(new PseudoRandomizer(getMillisecondsGetter(), getStringNumericValueProductCounter(), getDivisioner(), getValueComparator()));
 			setScanner(new Scanner(System.in));
 			setRangeAsker(new RangeAsker(getScanner()));
 			
@@ -96,12 +96,12 @@ public class MainApp {
 		MainApp.endRange = endRange;
 	}
 
-	public static ValueComparator getValueFinder() {
-		return valueFinder;
+	public static ValueComparator getValueComparator() {
+		return valueComparator;
 	}
 
-	public static void setValueFinder(ValueComparator valueFinder) {
-		MainApp.valueFinder = valueFinder;
+	public static void setValueComparator(ValueComparator valueFinder) {
+		MainApp.valueComparator = valueFinder;
 	}
 
 	public static StringNumericValueProductCounter getStringNumericValueProductCounter() {
