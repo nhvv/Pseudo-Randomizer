@@ -1,7 +1,5 @@
 package org.stoicfey.pseudorandomizer.pseudo.random;
 
-import java.util.Scanner;
-
 import org.stoicfey.pseudorandomizer.pseudo.random.divisioner.Divisioner;
 import org.stoicfey.pseudorandomizer.pseudo.random.milliseconds.getter.MillisecondsGetter;
 import org.stoicfey.pseudorandomizer.pseudo.random.string.numeric.value.splitter.StringNumericValueProductCounter;
